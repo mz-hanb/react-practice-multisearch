@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Filter = ({filterName}) => (
-  <input placeholder={filterName} />
+const Filter = ({filterName, id, filterKey, ehChange }) => (
+  <input placeholder={filterName} onChange={ (e) => ehChange(e, id, filterKey)} />
 )
 
-const Filters = ({filterList}) => {   
+const Filters = ({filterList, ehChange}) => {   
   
   const filters = filterList.map(
-    (filter) => ( <Filter filterName={filter} /> )
+    (filter, idx) => ( <Filter filterName={filter.desc} id={idx} key={filter.key} filterKey={filter.key} ehChange={ehChange} /> )
   )
   
   return(    
