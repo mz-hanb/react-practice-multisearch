@@ -29,25 +29,7 @@ class App extends Component {
   };
 
   componentDidMount() {    
-    this._getList();
-
-    setTimeout(() => {
-      this.setState({
-        data: [
-          ...this.state.data,
-          {
-            id: 3,
-            country: "United Arab Emirates",
-            capital: "Abu Dhabi",
-            region: "Asia",
-            subregion: "Western Asia",
-            latitude: "24.00",
-            longitude: "100"
-          }
-        ]
-      });
-    }, 500);
-    // getData();
+    this._getList();    
   }
 
   _getList = async() => {    
@@ -69,15 +51,16 @@ class App extends Component {
 
   _changeFilter(e, id, key){
     console.log( id );
-    const val = e.target.value;
-    const filters = this.state.filters;
-    filters[id] = val;    
+    // const val = e.target.value;
+    const {filters} = this.state;
+    // const nextFilters = [...filters];
+    // nextFilters[id] = val;
 
     this.setState({
       filters
     })
 
-    console.log( this.state.filters );
+    console.log( filters );
     
   
   }
