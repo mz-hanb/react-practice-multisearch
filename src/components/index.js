@@ -1,7 +1,2 @@
-import Filters from './Filters';
-import List from './DataList';
-
-export {
-  Filters, 
-  List
-}
+export { default as Filters } from './Filters';
+export { default as DataList } from './DataList';

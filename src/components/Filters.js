@@ -1,7 +1,13 @@
 import React from 'react';
+import './Filters.css';
 
 const Filter = ({filterName, id, filterKey, ehChange }) => (
-  <input placeholder={filterName} onChange={ (e) => ehChange(e, id, filterKey)} />
+  <div className="filters-filed">    
+    <label> {filterName}
+    <input placeholder={filterName} onChange={ (e) => ehChange(e, id, filterKey)} />
+      </label>
+  </div>
+  
 )
 
 const Filters = ({filterList, ehChange}) => {   
@@ -11,7 +17,7 @@ const Filters = ({filterList, ehChange}) => {
   )
   
   return(    
-    <div>
+    <div className="filters">
       {filters}      
     </div>
   )

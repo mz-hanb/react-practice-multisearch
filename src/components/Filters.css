@@ -1,0 +1,19 @@
+.filters{
+  
+}
+
+
+.filters input{
+  padding: .5rem;
+  margin-right: 10px;
+}
+
+.filters .filters-filed{  
+  text-align: left;
+  display: inline-block;  
+}
+
+.filters .filters-filed label, 
+.filters .filters-filed input{
+  display: block;
+}

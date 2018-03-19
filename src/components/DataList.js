@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './DataList.css';
 
 const Item = obj => {  
   return (
@@ -19,7 +20,7 @@ class DataList extends Component {
     const items = data.map(ele => Item(ele));    
     
     return (
-      <table>
+      <table className="dataList">
         <thead>
         <tr>
           <th>Country</th>
